@@ -8,24 +8,20 @@
 // Khi chọn 2: Gọi hàm giải phương trình bậc 2
 // Khi chọn 3: Thoát khỏi chương trình và in ra dòng chữ "Good Bye!"
 
-function GiaiphuongTrinhBac1() {
-  let a = prompt("Nhap so a")
-  let b = prompt("Nhap so b")
-  if (a === 0) {
+function GiaiphuongTrinhBac1(a, b) {
+  if (a == 0 && b == 0) {
     console.log("Phương trình vô số nghiệm")
+  } else if (a == 0 && b != 0) {
+    console.log("Phương trình vô nghiệm!")
   } else {
     let nghiem = -b / a
     console.log("phương trình có nghiệm là: " + nghiem.toFixed(2))
   }
 }
 
-function GiaiphuongTrinhBac2() {
-  let a = prompt("Nhap so a")
-  let b = prompt("Nhap so b")
-  let c = prompt("Nhap so c")
-
-  if (a === 0) {
-    GiaiphuongTrinhBac1(a, b)
+function GiaiphuongTrinhBac2(a, b, c) {
+  if (a == 0) {
+    GiaiphuongTrinhBac1(b, c)
   } else {
     let delta = Math.pow(b, 2) - 4 * a * c
 
@@ -56,11 +52,16 @@ THOÁT`)
   let outFlag = false
   switch (choose) {
     case "1": {
-      GiaiphuongTrinhBac1()
+      let a = prompt("Nhap so a")
+      let b = prompt("Nhap so b")
+      GiaiphuongTrinhBac1(a, b)
       break
     }
     case "2": {
-      GiaiphuongTrinhBac2()
+      let a = prompt("Nhap so a")
+      let b = prompt("Nhap so b")
+      let c = prompt("Nhap so c")
+      GiaiphuongTrinhBac2(a, b, c)
       break
     }
     case "3": {

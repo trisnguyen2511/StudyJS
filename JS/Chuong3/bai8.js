@@ -5,8 +5,10 @@ let a = prompt("Nhap so a")
 let b = prompt("Nhap so b")
 
 function GiaiphuongTrinhBac1(a, b) {
-  if (a === 0) {
+  if (a == 0 && b == 0) {
     console.log("Phương trình vô số nghiệm")
+  } else if (a == 0 && b != 0) {
+    console.log("Phương trình vô nghiệm!")
   } else {
     let nghiem = -b / a
     console.log("phương trình có nghiệm là: " + nghiem.toFixed(2))
