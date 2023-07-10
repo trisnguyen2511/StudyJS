@@ -50,6 +50,59 @@ const students = [
     hoa: 9,
   },
 ]
+
+// const students = [
+//   {
+//     id: 1,
+//     name: "Dinh",
+//     toan: 5,
+//     ly: 6,
+//     hoa: 7,
+//   },
+//   {
+//     id: 2,
+//     name: "Nam",
+//     toan: 10,
+//     ly: 8,
+//     hoa: 5,
+//   },
+//   {
+//     id: 3,
+//     name: "Tan",
+//     toan: 5,
+//     ly: 5,
+//     hoa: 5,
+//   },
+//   {
+//     id: 4,
+//     name: "Hung",
+//     toan: 9,
+//     ly: 7,
+//     hoa: 7,
+//   },
+//   {
+//     id: 5,
+//     name: "Tri",
+//     toan: 9,
+//     ly: 8,
+//     hoa: 9,
+//   },
+//   {
+//     id: 6,
+//     name: "Anh",
+//     toan: 8,
+//     ly: 10,
+//     hoa: 9,
+//   },
+//   {
+//     id: 7,
+//     name: "Binh",
+//     toan: 7,
+//     ly: 6,
+//     hoa: 9,
+//   },
+// ]
+
 // Tạo menu như sau: === QUẢN LÝ SINH VIÊN ===
 
 // kiểm tra xem có phải tất cả sinh viên đều có các môn trên điểm trung bình không?
@@ -150,8 +203,11 @@ do {
 
 function KiemTraTatCaSinhVienCacMonTrenTrungBinh() {
   let isBelowAve = false
-  students.forEach((student) => {
-    if (student.toan < 5 || student.ly < 5 || student.hoa < 5) isBelowAve = true
+  // students.forEach((student) => {
+  //   if (student.toan < 5 || student.ly < 5 || student.hoa < 5) isBelowAve = true
+  // })
+  isBelowAve = students.every((student) => {
+    return student.toan < 5 || student.ly < 5 || student.hoa < 5
   })
   if (isBelowAve) {
     console.log("Co sinh vien duoi trung binh")
@@ -161,17 +217,23 @@ function KiemTraTatCaSinhVienCacMonTrenTrungBinh() {
 }
 function KiemTraCoSinhVienXepLoaiGioi() {
   let isGood = false
-  students.forEach((student) => {
-    if (
-      student.toan >= 8 &&
-      student.ly >= 8 &&
-      student.hoa >= 8 &&
-      //Con nua
-      (student.toan + student.ly + student.hoa) / 3 >= 8
-    )
-      isGood = true
-  })
+  // students.forEach((student) => {
+  //   if (
+  // student.toan >= 8 &&
+  // student.ly >= 8 &&
+  // student.hoa >= 8 &&
+  //     //Con nua
+  //     (student.toan + student.ly + student.hoa) / 3 >= 8
+  //   )
+  //     isGood = true
+  // })
 
+  // isGood = students.some((student) => {
+  //   return student.toan >= 8 && student.ly >= 8 && student.hoa >= 8
+  // })
+  isGood = students.some((student) => {
+    return student.toan >= 8 && student.ly >= 8 && student.hoa >= 8
+  })
   if (isGood) {
     console.log("Co sinh vien gioi")
   } else {
@@ -240,10 +302,18 @@ function ThemThuocTinhSum() {
 }
 
 function TinhToanDiemTatCaSinhVien() {
-  students.forEach((student) => {
-    let sum = Number(student.toan) + Number(student.ly) + Number(student.hoa)
-    console.log("Tong diem cua Sinh vien " + student.name + " la: " + sum)
-  })
+  // students.forEach((student) => {
+  //   let sum = Number(student.toan) + Number(student.ly) + Number(student.hoa)
+  //   console.log("Tong diem cua Sinh vien " + student.name + " la: " + sum)
+  // })
+
+  const sum = students.reduce((prev, curr) => {
+    // let sum = prev.toan + prev.ly + prev.hoa
+    let sum = curr.toan + curr.ly + curr.hoa
+    return prev + sum
+  }, 0)
+
+  console.log("Tong diem cua tat ca sinh vien la: " + sum)
 }
 
 function TinhDiemTrungBinhMoiSinhVien() {

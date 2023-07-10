@@ -31,7 +31,7 @@ function XuatMang(arr) {
 }
 
 function tongMang(arr) {
-  return arr.reduce((prev, curr, index) => {
+  return arr.reduce((prev, curr) => {
     return (curr += prev)
   }, 0)
 }
@@ -58,7 +58,7 @@ const kiemTraPhanTuLonHon5 = (arr) => {
   }
 }
 
-nhapNang()
+// nhapNang()
 arr = Nhan3GiaTri(arr)
 // Nhan3GiaTri()
 XuatMang(arr)
