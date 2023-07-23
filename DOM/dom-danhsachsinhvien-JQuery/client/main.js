@@ -2,31 +2,31 @@ const studentsApi = "http://localhost:3001/students"
 const classApi = "http://localhost:3001/classList"
 
 var students = [
-  {
-    id: "1",
-    name: "Nguyen Van Teo",
-    classId: "1",
-  },
-  {
-    id: "2",
-    name: "Nguyen Van Ti",
-    classId: "2",
-  },
-  {
-    id: "3",
-    name: "Tran Van Tun",
-    classId: "3",
-  },
-  {
-    id: "4",
-    name: "Nguyen Thi Heo",
-    classId: "1",
-  },
-  {
-    id: "5",
-    name: "Le Thi Be",
-    classId: "1",
-  },
+  // {
+  //   id: "1",
+  //   name: "Nguyen Van Teo",
+  //   classId: "1",
+  // },
+  // {
+  //   id: "2",
+  //   name: "Nguyen Van Ti",
+  //   classId: "2",
+  // },
+  // {
+  //   id: "3",
+  //   name: "Tran Van Tun",
+  //   classId: "3",
+  // },
+  // {
+  //   id: "4",
+  //   name: "Nguyen Thi Heo",
+  //   classId: "1",
+  // },
+  // {
+  //   id: "5",
+  //   name: "Le Thi Be",
+  //   classId: "1",
+  // },
 ]
 
 var classList = [
