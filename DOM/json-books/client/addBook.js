@@ -46,8 +46,8 @@ async function addHandle() {
     headers: { "Content-Type": "application/json" },
   })
 
-  if (result) {
-    console.log("succ")
+  if (result.data) {
+    location.replace("http://127.0.0.1:5500/DOM/json-books/client/list.html")
   }
 }
 

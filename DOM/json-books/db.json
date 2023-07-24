@@ -4,8 +4,7 @@
       "id": 1,
       "title": "truyện dài",
       "description": "mô tả về truyện dài",
-      "detail": "chi tiết về truyện dài",
-      "status": true
+      "detail": "chi tiết về truyện dài"
     },
     {
       "id": 2,
@@ -18,18 +17,7 @@
       "id": 3,
       "title": "sách giáo khoa",
       "description": "mô tả về sách giáo khoa",
-      "detail": "chi tiết về sách giáo khoa",
-      "status": true
-    },
-    {
-      "id": 4,
-      "title": "345"
-    },
-    {
-      "id": 5,
-      "title": "ert",
-      "description": "t34grth",
-      "detail": "gtr"
+      "detail": "chi tiết về sách giáo khaaaoa"
     }
   ]
 }

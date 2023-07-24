@@ -33,7 +33,7 @@ function addElementStudent(book) {
     <td>${book.detail}</td>
     <td style="text-align: center">${book.status ? "YES" : "NO"}</td>
     <td>
-    <a href="edit.html">Sửa</a>
+    <a href="edit.html?id=${book.id}">Sửa</a>
     <a href="" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xóa</a>
     </td>
   </tr>
